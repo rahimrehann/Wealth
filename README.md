@@ -22,13 +22,7 @@ The dashboard aggregates spending data in real time, showing KPIs like total mon
 4. AI Receipt Scanning (Gemini API)
 One of the most powerful features is the AI receipt scanner:
 
-Users upload a receipt image.
-
-The backend uses Gemini’s Vision model to perform OCR and extract raw text.
-
-Then, the LLM is prompted with a strict Zod schema to return structured JSON (merchant, date, total, tax, items, etc).
-
-The result is validated, converted into a transaction, and saved automatically — turning messy receipts into structured finance data.
+Users upload a receipt image. The backend uses Gemini’s Vision model to perform OCR and extract raw text. Then, the LLM is prompted with a strict Zod schema to return structured JSON (merchant, date, total, tax, items, etc). The result is validated, converted into a transaction, and saved automatically — turning messy receipts into structured finance data.
 
 (Currently Working On this...)
 
@@ -51,29 +45,24 @@ All write and AI endpoints are protected by Arcjet. It applies sliding-window ra
 ---
 
 Service	Purpose
-Clerk	Authentication, user sessions, SSR auth
-Supabase Postgres	Main database for accounts, transactions, budgets
-Prisma	Type-safe database access & schema migrations
-Gemini API	Receipt OCR, structured data extraction, monthly insights generation
-Inngest	Scheduled jobs (budget alerts, recurring txns, monthly reports)
-Arcjet	API rate limiting & bot protection
-Recharts	Data visualization (pie & bar charts)
-Vercel	Deployment (to be done....)
+Clerk	Authentication, user sessions, SSR auth<br/>
+Supabase Postgres	Main database for accounts, transactions, budgets<br/>
+Prisma	Type-safe database access & schema migrations<br/>
+Gemini API	Receipt OCR, structured data extraction, monthly insights generation<br/>
+Inngest	Scheduled jobs (budget alerts, recurring txns, monthly reports)<br/>
+Arcjet	API rate limiting & bot protection<br/>
+Recharts	Data visualization (pie & bar charts)<br/>
+Vercel	Deployment (to be done....)<br/>
 
 
 🧠 What I Learned
 ---
 
-Building this project pushed me to work at the intersection of frontend, backend, and AI — and it taught me more than just coding.
-
-I learned how important it is to treat AI like an unreliable teammate: powerful, but only if you wrap it with strict validation, error handling, and clear instructions.
-
-I saw firsthand how moving background work off the main thread (with Inngest) makes everything more stable and scalable.
-
-Designing proper database schemas, using cents for money, adding indexes, securing endpoints, and rate limiting with Arcjet — all of these reinforced that real-world apps are built on strong foundations, not hacks.
-
-I also learned to think like a system designer, not just a coder. Every service I integrated had a reason, a trade-off, and a role.
-
-Most importantly, this project reminded me that you don’t need to wait for “someday” to build something ambitious. You just have to start. Every feature felt overwhelming at first — AI, cron jobs, rate limiting — but breaking it down piece by piece, I was able to build something I’m genuinely proud of.
+Building this project pushed me to work at the intersection of frontend, backend, and AI — and it taught me more than just coding.<br/>
+I learned how important it is to treat AI like an unreliable teammate: powerful, but only if you wrap it with strict validation, error handling, and clear instructions.<br/>
+I saw firsthand how moving background work off the main thread (with Inngest) makes everything more stable and scalable.<br/>
+Designing proper database schemas, using cents for money, adding indexes, securing endpoints, and rate limiting with Arcjet — all of these reinforced that real-world apps are built on strong foundations, not hacks.<br/>
+I also learned to think like a system designer, not just a coder. Every service I integrated had a reason, a trade-off, and a role.<br/>
+Most importantly, this project reminded me that you don’t need to wait for “someday” to build something ambitious. You just have to start. Every feature felt overwhelming at first — AI, cron jobs, rate limiting — but breaking it down piece by piece, I was able to build something I’m genuinely proud of.<br/>
 
 💡 If you keep shipping, learning, and iterating, complex projects stop feeling impossible — they start feeling inevitable.
