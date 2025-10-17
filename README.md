@@ -28,6 +28,8 @@ Users upload a receipt image. The backend uses Gemini’s Vision model to perfor
 
 (Currently Working On this...)
 
+![image alt](https://github.com/rahimrehann/Wealth/blob/3fd6c278ff0c189b0557b7747ca61643613b2d8a/dashboard%20pic.png)
+
 5. Budgets & Alerts (Inngest)
 Users can set monthly budgets. Inngest cron jobs run daily to check spending:
 
