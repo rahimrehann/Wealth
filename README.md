@@ -6,6 +6,8 @@ The platform allows users to manage their finances intelligently: they can track
 
 I approached this project as if I were building a real product. It combines modern frontend frameworks, a typed backend with Prisma and Supabase, AI capabilities for data extraction and summarization, background job automation, and enterprise-level authentication and security.
 
+![image alt](https://github.com/rahimrehann/Wealth/blob/e4b6fdc478eb25569e690ec799e840c72389b33b/main%20page%20photo.png)
+
 
 🧭 How It Works (End-to-End)
 ---
