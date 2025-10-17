@@ -28,8 +28,6 @@ Users upload a receipt image. The backend uses Gemini’s Vision model to perfor
 
 (Currently Working On this...)
 
-![image alt](https://github.com/rahimrehann/Wealth/blob/3fd6c278ff0c189b0557b7747ca61643613b2d8a/dashboard%20pic.png)
-
 5. Budgets & Alerts (Inngest)
 Users can set monthly budgets. Inngest cron jobs run daily to check spending:
 
@@ -44,6 +42,8 @@ On the 1st of each month, an Inngest job aggregates last month’s spending, gen
 7. Security & Rate Limiting (Arcjet)
 All write and AI endpoints are protected by Arcjet. It applies sliding-window rate limiting per user/IP and bot protection on public pages. This ensures API stability and prevents abuse.
 
+![image alt](https://github.com/rahimrehann/Wealth/blob/3fd6c278ff0c189b0557b7747ca61643613b2d8a/dashboard%20pic.png)
+![image alt](https://github.com/rahimrehann/Wealth/blob/9e5aa0c9e212dca024b9f2e2a101793d884146e0/account%20photo.png)
 
 📡 APIs & Services Used
 ---
