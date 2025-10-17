@@ -44,6 +44,7 @@ All write and AI endpoints are protected by Arcjet. It applies sliding-window ra
 
 ![image alt](https://github.com/rahimrehann/Wealth/blob/3fd6c278ff0c189b0557b7747ca61643613b2d8a/dashboard%20pic.png)
 ![image alt](https://github.com/rahimrehann/Wealth/blob/9e5aa0c9e212dca024b9f2e2a101793d884146e0/account%20photo.png)
+![image alt](https://github.com/rahimrehann/Wealth/blob/52df1c02ee22d7490c4443ceb81cc73f6b618eff/add%20transaction%20page.png)
 
 📡 APIs & Services Used
 ---
