@@ -1,4 +1,5 @@
 🧠 Project Explanation
+---
 
 Welth is a full-stack AI-powered personal finance platform I built using Next.js 15, React 19, Prisma, Supabase, Clerk, Gemini AI, Inngest, Arcjet, and Shadcn UI.
 The platform allows users to manage their finances intelligently: they can track and categorize transactions, analyze spending patterns, scan receipts with AI, set budgets, and receive automated monthly insights and alerts — all in a modern, production-grade SaaS environment.
@@ -7,17 +8,18 @@ I approached this project as if I were building a real product. It combines mode
 
 
 🧭 How It Works (End-to-End)
+---
 
-Authentication (Clerk)
+1. Authentication (Clerk)
 Users sign in using Clerk’s secure auth system. It handles sessions, JWTs, and organization management, allowing me to focus on the app’s core features while ensuring production-grade security.
 
-Accounts & Transactions (Prisma + Supabase)
+2. Accounts & Transactions (Prisma + Supabase)
 Each user can create multiple accounts (e.g., credit card, chequing). Transactions are stored in a Supabase Postgres database using Prisma ORM. I designed the schema with proper indexing, foreign keys, and cent-based amounts to avoid floating-point errors.
 
-Dashboard Visualization (Next.js + Recharts)
+3. Dashboard Visualization (Next.js + Recharts)
 The dashboard aggregates spending data in real time, showing KPIs like total monthly spend, remaining budget, top merchants, and more. I built bar and pie charts using Recharts, with all data fetched through optimized SQL queries via Prisma.
 
-AI Receipt Scanning (Gemini API)
+4. AI Receipt Scanning (Gemini API)
 One of the most powerful features is the AI receipt scanner:
 
 Users upload a receipt image.
@@ -30,7 +32,7 @@ The result is validated, converted into a transaction, and saved automatically �
 
 (Currently Working On this...)
 
-Budgets & Alerts (Inngest)
+5. Budgets & Alerts (Inngest)
 Users can set monthly budgets. Inngest cron jobs run daily to check spending:
 
 If spending exceeds 80% of the budget, an email alert is sent.
@@ -38,14 +40,16 @@ If spending exceeds 80% of the budget, an email alert is sent.
 If spending passes the budget, a warning is issued.
 These are background functions, so the user experience remains smooth.
 
-Monthly Reports & AI Insights (Inngest + Gemini)
+6. Monthly Reports & AI Insights (Inngest + Gemini)
 On the 1st of each month, an Inngest job aggregates last month’s spending, generates a narrative summary using Gemini, compiles charts, and emails a complete Monthly Report to the user. This turns raw transaction data into meaningful insights automatically.
 
-Security & Rate Limiting (Arcjet)
+7. Security & Rate Limiting (Arcjet)
 All write and AI endpoints are protected by Arcjet. It applies sliding-window rate limiting per user/IP and bot protection on public pages. This ensures API stability and prevents abuse.
 
 
 📡 APIs & Services Used
+---
+
 Service	Purpose
 Clerk	Authentication, user sessions, SSR auth
 Supabase Postgres	Main database for accounts, transactions, budgets
@@ -58,6 +62,7 @@ Vercel	Deployment (to be done....)
 
 
 🧠 What I Learned
+---
 
 Building this project pushed me to work at the intersection of frontend, backend, and AI — and it taught me more than just coding.
 
